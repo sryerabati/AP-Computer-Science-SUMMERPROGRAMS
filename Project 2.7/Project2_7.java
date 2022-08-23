@@ -6,8 +6,10 @@
  * To show the use of the % operator
  * 
  * Variable List:
- *  sides = number of sides of the shape name displayed
- *  num = number of sides inputted by the user
+ *  amount = amount of seconds inputted by user
+ *  hr = amount of hours within those seconds
+ *  min = amount of minutes within those seconds
+ *  sec = amount of leftover seconds
  */
 
 import java.util.Scanner;
@@ -15,24 +17,15 @@ public class Project2_7
 {
     public static void main(String[] args) 
     {
-        int sides = 7; // declaration with initialization
-        System.out.println ("A heptagon has " + sides + " sides.");
-        sides = 10; // assignment statement
-        System.out.println ("A decagon has " + sides + " sides.");
-        sides = 12;
-        System.out.println ("A dodecagon has " + sides + " sides.");
-        
+        System.out.println("How many seconds would you like to convert?");
         Scanner scan = new Scanner(System.in);
+        int amount = scan.nextInt();
         
-        System.out.println("Enter a number of sides (Less than 12):");
-        int num = scan.nextInt();
-        if (num>12) {
-            System.out.println("I said to enter a number less than 12...");
-        }
-        else {
-            System.out.println("If a dodecagon side amount was divided with");
-            System.out.println("the inputted side amount, it would have a");
-            System.out.println("remainder of " + (sides%num) +".");
-        }
+        int hr = (amount - (amount % 3600))/3600;
+        int min = ((amount%3600) - ((amount%3600)%60))/60;
+        int sec = (amount%3600)%60;
+        
+        System.out.println("That amount of seconds would be:");
+        System.out.println(hr +" hours, " + min + " minutes, and " + sec + " seconds.");
     }
 }

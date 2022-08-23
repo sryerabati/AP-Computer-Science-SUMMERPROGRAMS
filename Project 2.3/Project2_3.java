@@ -11,6 +11,9 @@
  *  quo = quotient of A / B
  *  rem = remainder of A / B
  *  pow = result of A to the power of B
+ *  sum = sum of A and B
+ *  diff = difference of A and B
+ *  prod = product of A and B
  *  
  */
 
@@ -33,9 +36,18 @@ public class Project2_3
         double quo = numA/numB;
         double rem = numA % numB;
         double pow = Math.pow( numA, numB);
+        double sum = numA + numB;
+        double diff = numA - numB;
+        double prod = numA*numB;
+        
+        
+        
         
         System.out.println();
         System.out.println();
+        System.out.println("A plus B = " + sum);
+        System.out.println("A minus B = " + diff);
+        System.out.println("A times B = " + prod);
         System.out.println("A divided by B is "+ quo);
         System.out.println("The remainder of A divided by B is "+ rem);
         System.out.println("A to the power of B = "+ pow);

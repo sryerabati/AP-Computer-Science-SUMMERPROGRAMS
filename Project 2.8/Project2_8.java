@@ -14,30 +14,22 @@ import java.util.*;
 public class Project2_8
 {
    public static void main(String[]args) {
-       System.out.println("Do you want to use the operator [1] Power or [2] Sqrt");
        Scanner scan = new Scanner(System.in);
-       int choice = scan.nextInt();
-       if (choice == 1) {
-           
-           System.out.println("Enter the base:");
-           double num1a = scan.nextDouble();
-           System.out.println("Enter the power:");
-           double num2 = scan.nextDouble();
-           System.out.println();
-           System.out.println("The result is "+(Math.pow(num1a, num2)) + ".");
-           
-       }
-       else if (choice == 2){
-        System.out.println("Enter the number");
-        double num1 = scan.nextDouble();
-        System.out.println();
-        System.out.println("The Square Root of " + num1 + " is " + (Math.sqrt(num1) + "."));
+       System.out.println("Enter the first x coordinate:");
+       int x1 = scan.nextInt();
+       
+       System.out.println("Enter the first y coordinate:");
+       int y1 = scan.nextInt();
         
-        }
-        else {
-            System.out.println("ERROR! The choices were only between 1 and 2...");
-            
-        }
-        
+       System.out.println("Enter the second x coordinate:");
+       int x2 = scan.nextInt();
+       
+       System.out.println("Enter the second y coordinate:");
+       int y2 = scan.nextInt();
+       
+       double distance = Math.sqrt( (Math.pow((x2-x1),2) + Math.pow((y2-y1),2)) );
+       
+       System.out.println();
+       System.out.println("The distance between the two coordinates is " + distance);
         }
 }

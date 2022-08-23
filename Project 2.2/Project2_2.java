@@ -8,6 +8,7 @@
  *  num1 = 1st Favorite Number
  *  num2 = 2nd Favorite Number
  *  num3 = Least Favorite Number
+ *  avg = avg of 3 numbers
  */ 
 
 import java.util.Scanner;
@@ -19,16 +20,17 @@ public class Project2_2
         
         Scanner scan = new Scanner(System.in);
         System.out.println ("Enter your 1st favorite number!");
-        int num1 = scan.nextInt();
+        double num1 = scan.nextDouble();
         System.out.println("Enter your 2nd favorite number!");
-        int num2 = scan.nextInt();
+        double num2 = scan.nextDouble();
         System.out.println("Enter your least favorite number!)");
-        int num3 = scan.nextInt();
-        
+        double num3 = scan.nextDouble();
+        double avg = (num1+num2+num3)/3;
         System.out.println();
         System.out.println("Your favorite number is " + num1 + ".");
         System.out.println("Your 2nd favorite number is "+ num2 + ".");
-        System.out.println("Lastly, your least favorite number is " + num3 + ".");
+        System.out.println("Your least favorite number is " + num3 + ".");
+        System.out.println("Lastly, the average of all numbers is " + avg +".");
         
         
     }
